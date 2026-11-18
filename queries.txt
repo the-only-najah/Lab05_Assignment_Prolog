@@ -1,0 +1,115 @@
+ == Najah - 9FS3 ==
+
+
+ ?- father(homer,lisa).
+true.
+
+ ?- father(herp,mona).
+false.
+
+ ?- father(clancy,C).
+C = marge ;
+C = patty ;
+C = selma.
+
+
+
+ ?- mother(jackie,patty).
+true.
+
+ ?- mother(patty,jackie).
+false.
+
+ ?- mother(marge,X).
+X = bart ;
+X = lisa ;
+X = maggie.
+
+
+
+ ?- son(X,abraham).
+X = herb ;
+X = homer ;
+false.
+
+ ?- son(_,clancy).
+false.
+
+
+
+ ?- daughter(X,homer).
+X = lisa ;
+X = maggie ;
+false.
+
+ ?- daughter(X,selma).
+X = ling.
+
+
+
+ ?- brother(_,patty).
+false.
+
+ ?- brother(X,herb).
+X = homer .
+
+
+
+ ?- sister(lisa,maggie).
+true .
+
+ ?- sister(lisa,ling).
+false.
+
+
+
+ ?- grandfather(abraham,X).
+X = bart ;
+X = lisa ;
+X = maggie.
+
+ ?- grandfather(homer,X).
+false.
+
+
+
+ ?- aunt(patty,ling).
+true .
+
+ ?- aunt(patty,bart).
+true .
+
+
+
+ ?- uncle(herb,ling).
+false.
+
+ ?- uncle(herb,bart).
+true .
+
+
+
+ ?- cousin(lisa,ling).
+true .
+
+ ?- cousin(lisa,bart).
+false.
+
+
+
+ ?- ancestor(mona,lisa).
+true .
+
+ ?- ancestor(jackie,ling).
+true .
+
+ ?- ancestor(mona,Z).
+Z = herb ;
+Z = homer ;
+Z = bart ;
+Z = lisa ;
+Z = maggie ;
+false.
+
+
+
